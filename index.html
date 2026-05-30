@@ -1,140 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="Tomer Gilboa personal info website">
-        <title>⚡ Tomer's Personal site</title>
-    </head>
-    <body>
-        <table cellspacing="20">
-            <tr>
-                <td>
-                  <img src="https://pbs.twimg.com/profile_images/1645925663684132864/oRN9IVoc_400x400.jpg"
-                       alt="tomer gilboa profile picture" width=200>
-                </td>
-                <td>
-                    <br> <br> <br> <br> <br> <br> <br>
-                    <strong>E-mail:</strong> <a href="mailto:gilboa.tomer@gmail.com">gilboa.tomer@gmail.com></a> <br>
-                    <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/tomer-gilboa">
-                    https://www.linkedin.com/in/tomer-gilboa </a> <br>
-                    <strong>Mobile/WhatsApp:</strong> +972-54-7782643 <br>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomer Gilboa | Principal Security Architect</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --text-color: #e2e8f0;
+            --accent-color: #38bdf8;
+            --card-bg: #1e293b;
+            --border-color: #334155;
+        }
 
-                    <form action="/contact-me.html" >
-                       <button type="button">Contact Me!</button>
-                    </form>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
 
-                </td>
-            </tr>
-        </table>
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+        }
 
-        <hr>
-        <h1>Tomer Gilboa</h1>
-        <em>Senior Cloud Software Architect lead</em> <br>
-        <h3><b>Summary</b></h3>
-        <hr>
-        <p>
-        Technical leader, experienced in building large-scale systems. Diverse domain experience in cloud computing,
-        big data analytics, and IP networks. Hands-On experience with public cloud (AWS).
-        Leading overall product technical processes from requirements gathering, design reviews presentation,
-        support SW development, and testing cycle. Technologies: AWS cloud solution architecture associate,
-        Kafka, SNS SQS message bus, TCP/IP networking, Kubernetes, Python, C#, IP decoders, and video streaming.
-        AWS serverless(lambda) Passion for innovation and technology,
-        technical in-depth understanding focus on customer value. Collaborate with various interfaces
-        in a complex matrix execution model to achieve goals.
-        </p>
+        nav {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
 
-        <h3><b>Academic education</b></h3>
-        <hr>
-        <table cellspacing="10">
-            <tr>
-               <td>
-                    1997-1999:
-               </td>
-                <td>
-                    Master of Business Administration, M.B.A.
-               </td>
-                <td>
-                    Ben Gurion University
-               </td>
-            </tr>
-            <tr>
-               <td>
-                    1992-1996:
-               </td>
-                <td>
-                    Bachelor's degree in electrical engineering and computers, B.Sc.
-               </td>
-                <td>
-                    Ben Gurion University
-               </td>
-            </tr>
-            <tr>
-               <td>
-                    2021:
-               </td>
-                <td>
-                    AWS Certified Solutions Architect - Associate (SAA-C02
-               </td>
+        nav .logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            text-decoration: none;
+        }
 
-            </tr>
-        </table>
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
 
-        <br>
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
 
-        <h3><b>Work experience</b></h3>
-        <hr>
-        <b>2022-Today: Senior Cloud Software Architect lead - VIA Transportation</b> <br>
-        <ul>
-            <li>Define product requirements and high-level design (HLD) for the R&D teams</li>
-            <li>Hands-On experience with Python for MicroService interfaces modeling</li>
-            <li>Provide solution based on industry Design Patterns</li>
-            <li>Support sales process within complex customer environments</li>
-            <li>Scrum/agile development methodologies</li>
-            <li>matrix management of dev and QA teams</li>
-        </ul>
+        nav a:hover {
+            color: var(--accent-color);
+        }
 
-        <h4><b><a href="additional Work experience.html">additional Work experience</a></b></h4>
+        main {
+            max-width: 1000px;
+            margin: 80px auto 0;
+            padding: 2rem;
+        }
 
-        <h3><b>Skills and Technology</b></h3>
-        <table cellspacing="20">
-            <tr>
-                <td>
-                    ⭐
-                </td>
-                <td>
-                    Technology:
-                </td>
-                <td>
-                    IP networks, public cloud (AWS),message bus (Kafka, SNS, SQS, Kinesis), Hadoop (HDFS, YARN, Spark Hive)
-                    MySQL, DynamoDB, Lambda(serverless), Kubernetes, REST API, Python, HTML(5) CSS(3), JSON, XML
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    ⭐ ⭐
-                </td>
-                <td>
-                    Design:
-                </td>
-                <td>
-                    Microservices, external interfaces, monolith decomposition, High level design(HLD)
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    ⭐ ⭐ ⭐
-                </td>
-                <td>
-                    Personal:
-                </td>
-                <td>
-                    Team player, end to end ownership, Tier one customer facing, matrix management multiple teams,
-                    agile dev process. presale process, research
-                </td>
-            </tr>
-        </table>
+        section {
+            padding: 3rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
 
+        section:last-child {
+            border-bottom: none;
+        }
 
-    </body>
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 0.25rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #94a3b8;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+
+        .card ul {
+            list-style-position: inside;
+            color: #94a3b8;
+            margin-top: 0.5rem;
+        }
+
+        .timeline-item {
+            margin-bottom: 2rem;
+            position: relative;
+            padding-left: 1.5rem;
+            border-left: 2px solid var(--border-color);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 6px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+        }
+
+        .time {
+            font-size: 0.85rem;
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        .company {
+            font-style: italic;
+            color: #94a3b8;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-list {
+            list-style: none;
+        }
+
+        .contact-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-list a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .contact-list a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#" class="logo">Tomer Gilboa</a>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Expertise</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h1>Tomer Gilboa</h1> [cite: 1]
+            <p class="subtitle">Senior Product Security Cloud Architect</p> [cite: 20]
+            <p>Highly accomplished security professional with over 15 years of experience designing and implementing secure cloud-based systems, infrastructure, and product architectures[cite: 6]. Expert in threat modeling, embedding secure SDLC practices, and driving cross-functional security initiatives across cloud and engineering teams[cite: 7, 21, 24].</p>
+        </section>
+
+        <section id="skills">
+            <h2>Core Expertise</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Cloud & Container Security</h3>
+                    <p>AWS Security Hub, AWS IAM, AWS FSBP, Prisma/Twistlock, Kubernetes, and container security[cite: 8, 29].</p>
+                </div>
+                <div class="card">
+                    <h3>Application Security</h3>
+                    <p>Secure SDLC, Threat Modeling (STRIDE), SAST/SCA automation via Coverity and Black Duck (SBOM compliance)[cite: 23, 25, 29].</p>
+                </div>
+                <div class="card">
+                    <h3>Frameworks & Architecture</h3>
+                    <p>OWASP, NIST, MITRE ATT&CK, GDPR, and highly scalable microservices/mesh network environments[cite: 8, 26, 30].</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Professional Journey</h2>
+            
+            <div class="timeline-item">
+                <div class="time">2023 - Present</div>
+                <h3>Senior Product Security Cloud Architect</h3>
+                <div class="company">Honeywell</div> [cite: 20]
+                <p>Leading product security risk posture by developing policies and controls for cloud, DevOps, and engineering teams. Spearheading threat modeling, secure SDLC integration, and dependency/vulnerability management[cite: 21, 23, 25].</p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="time">2011 - 2023</div>
+                <h3>Senior System Architect Team Leader</h3>
+                <div class="company">Cognyte (Former Verint Systems)</div> [cite: 30]
+                <p>Led architecture design teams focused on high-availability, large-scale microservices, and secure data pipeline routing using Kafka and distributed big data platforms[cite: 30, 32].</p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="time">2007 - 2011</div>
+                <h3>System Engineering Team Manager</h3>
+                <div class="company">VITEC</div> [cite: 34]
+                <p>Managed technical engineering teams focused on architectural designs, SRS technical definitions, and reliable high-performance communication software protocols[cite: 35, 36].</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <p>Feel free to reach out for professional inquiries or technical collaborations.</p>
+            <ul class="contact-list">
+                <li><strong>Email:</strong> <a href="mailto:gilboa.tomer@gmail.com">gilboa.tomer@gmail.com</a></li> [cite: 2]
+                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/tomer-gilboa" target="_blank">linkedin.com/in/tomer-gilboa</a></li> [cite: 4]
+            </ul>
+        </section>
+    </main>
+
+</body>
 </html>
